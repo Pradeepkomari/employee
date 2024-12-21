@@ -1,0 +1,20 @@
+package com.studentDetails.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.studentDetails.dao.StudentDetailsDao;
+import com.studentDetails.entity.StudentDetails;
+
+@Service
+public class StudentDetailsService {
+	
+	@Autowired
+	StudentDetailsDao sdd;
+	
+	
+	public String addDetails(StudentDetails s) {
+		return "";
+	}
+
+}

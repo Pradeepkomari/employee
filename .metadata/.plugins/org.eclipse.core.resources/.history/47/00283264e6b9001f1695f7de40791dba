@@ -1,0 +1,5 @@
+package com.gst.entity;
+
+public class Product {
+
+}

@@ -1,0 +1,33 @@
+package com.product.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Table(name = "Product")
+@Entity
+
+public class Product {
+	
+	private int id;
+	private int hsnCode;
+	private int percentage;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getHsnCode() {
+		return hsnCode;
+	}
+	public void setHsnCode(int hsnCode) {
+		this.hsnCode = hsnCode;
+	}
+	public int getPercentage() {
+		return percentage;
+	}
+	public void setPercentage(int percentage) {
+		this.percentage = percentage;
+	}
+
+}

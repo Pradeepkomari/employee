@@ -1,0 +1,48 @@
+package com.studentDetails.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.studentDetails.dao.StudentDetailsDao;
+import com.studentDetails.entity.StudentDetails;
+import com.studentDetails.exception.AgeException;
+
+@Service
+public class StudentDetailsService {
+
+	@Autowired
+	StudentDetailsDao sdd;
+
+	public String addDetails(StudentDetails s) throws AgeException {
+
+		if (s.getAge() >= 18) {
+			return sdd.addDetails(s);
+		} else {
+			throw new AgeException("Age less Than 18");
+		}
+	}
+
+	public String updateDetails(int rollNum, StudentDetails s) throws AgeException {
+		if (s.getAge() >= 18) {
+			return sdd.updateDetails(rollNum, s);
+		} else {
+			throw new AgeException("Age less Than 18");
+		}
+	}
+
+	public String deleteById(int id) {
+		return sdd.deleteById(id);
+	}
+
+	public StudentDetails getById(int id) {
+		return sdd.getById(id);
+	}
+	
+	public String addByList(List<StudentDetails> s) {
+		return "";
+	}
+	
+	
+
+}

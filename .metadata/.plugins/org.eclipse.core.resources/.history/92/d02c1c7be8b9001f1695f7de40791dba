@@ -1,0 +1,5 @@
+package com.gst.dao;
+
+public class GstDao {
+
+}

@@ -1,0 +1,61 @@
+package com.studentResults.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import com.studentResult.pojo.MarksPojo;
+import com.studentResult.pojo.StudentPojo;
+import com.studentResults.dao.StudentResultDao;
+import com.studentResults.entity.StudentResultEntity;
+
+@Service
+public class StudentResultService {
+
+	@Autowired
+	RestTemplate rt;
+	@Autowired
+	StudentResultDao srd;
+
+	public String addResult() {
+		String url1 = "http://localhost:8081/studentDetails/get";
+		String url2 = "http://localhost:8082/mark/getAll";
+
+		List<MarksPojo> marks = rt
+				.exchange(url1, HttpMethod.GET, null, new ParameterizedTypeReference<List<MarksPojo>>() {
+				}).getBody();
+
+		List<StudentPojo> students = rt
+				.exchange(url2, HttpMethod.GET, null, new ParameterizedTypeReference<List<StudentPojo>>() {
+				}).getBody();
+
+		List<StudentResultEntity> result = new ArrayList<>();
+
+		for (int i = 0; i < students.size(); i++) {
+			StudentPojo s = students.get(i);
+			for (int j = 0; j < marks.size(); j++) {
+				MarksPojo m = marks.get(j);
+
+				StudentResultEntity rst = new StudentResultEntity();
+
+				if (s.getRollNumber() == m.getRollNumber()) {
+					rst.setName(s.getName());
+					rst.setRollNumber(s.getRollNumber());
+					rst.setTotal(m.getSem1Total() + m.getSem2total());
+					rst.setPercentage(rst.getTotal() / 2);
+					result.add(rst);
+					break;
+				}
+
+			}
+
+		}
+
+		return srd.addResult(result);
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.gst.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gst.dao.GstDao;
+
+@Service
+public class GstService {
+	
+	@Autowired 
+	GstDao gd;
+
+}

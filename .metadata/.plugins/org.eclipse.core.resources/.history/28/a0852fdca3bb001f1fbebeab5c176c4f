@@ -1,0 +1,19 @@
+package com.studentMarkSheet.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import com.studentMarkSheet.entity.StudentMarkSheet;
+import com.studentMarkSheet.repository.StudentMarkSheetRepository;
+
+@Repository
+public class StudentMarkSheetDao {
+
+	@Autowired
+	StudentMarkSheetRepository smsr;
+
+	public String addMarks(StudentMarkSheet s) {
+		smsr.save(s);
+		return "Stored";
+	}
+
+}

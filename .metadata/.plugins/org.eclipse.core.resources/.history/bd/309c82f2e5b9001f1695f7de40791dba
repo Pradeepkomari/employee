@@ -1,0 +1,5 @@
+package com.gst.repository;
+
+public interface ProductRepository {
+
+}

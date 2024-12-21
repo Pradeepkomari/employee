@@ -1,0 +1,28 @@
+package com.studentResults.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import com.studentResults.dao.StudentResultDao;
+
+
+@Service
+public class StudentResultService {
+	
+	@Autowired
+	RestTemplate rt;
+	@Autowired
+	StudentResultDao srd;
+	
+	public String addResult() {
+		String url1 = "http://localhost:8086/studentDetails/get";
+		String url2 = "http://localhost:8086/mark/getAll";
+		
+		
+		
+		return "";
+	}
+	
+	
+
+}

@@ -1,0 +1,15 @@
+package com.studentMarkSheet.entity;
+
+public class StudentMarkSheet {
+	
+	private int id;
+	private int rollNumber;
+	private int sem1Theory;
+	private int sem1Pratical;
+	private int sem2Theory;
+	private int sem2Pratical;
+	private int sem1Total;
+	private int sem2total;
+	
+
+}

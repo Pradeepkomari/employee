@@ -1,0 +1,8 @@
+package com.studentMarkSheet.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.studentMarkSheet.entity.StudentMarkSheet;
+
+public interface StudentMarkSheetRepository extends JpaRepository<StudentMarkSheet, Integer> {
+
+}

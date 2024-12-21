@@ -1,0 +1,28 @@
+package com.studentResults.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.studentResults.dao.StudentResultDao;
+import com.studentResults.entity.StudentResultEntity;
+
+@Service
+public class StudentResultService {
+	
+	@Autowired
+	RestTemplate rt;
+	@Autowired
+	StudentResultDao srd;
+	
+	public String addResult() {
+		
+		
+		
+		
+		return "";
+	}
+	
+	
+
+}

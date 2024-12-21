@@ -1,0 +1,20 @@
+package com.studentMarkSheet.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.studentMarkSheet.dao.StudentMarkSheetDao;
+import com.studentMarkSheet.entity.StudentMarkSheet;
+
+@Service
+public class StudentMarkSheetService {
+
+	@Autowired
+	StudentMarkSheetDao smsd;
+
+	public String addMarks(StudentMarkSheet s) {
+		return "";
+	}
+
+}

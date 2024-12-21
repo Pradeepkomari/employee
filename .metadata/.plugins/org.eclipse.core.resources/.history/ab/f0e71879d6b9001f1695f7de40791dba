@@ -1,0 +1,16 @@
+package com.reciver.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/reciver")
+public class ReciverController {
+	
+	@GetMapping("/get")
+	public String get() {
+		return "Hello";
+	}
+
+}

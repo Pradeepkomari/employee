@@ -1,0 +1,20 @@
+package com.studentResults.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.studentResults.entity.StudentResultEntity;
+import com.studentResults.repositroy.StudentResultRepository;
+
+@Repository
+public class StudentResultDao {
+	
+	@Autowired
+	StudentResultRepository	srr;
+	
+	public String addResult(StudentResultEntity s) {
+		srr.save(s);
+		return "Stored";
+	}
+
+}

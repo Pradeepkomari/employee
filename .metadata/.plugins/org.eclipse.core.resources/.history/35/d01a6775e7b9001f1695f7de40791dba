@@ -1,0 +1,14 @@
+package com.gst.entity;
+
+
+
+public class Product {
+	
+	private int id;
+	private String name;
+	private int quantity;
+	private int hsnCode;
+	private int price;
+	
+
+}

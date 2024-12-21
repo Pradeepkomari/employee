@@ -1,0 +1,8 @@
+package com.studentResults.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentResultService {
+
+}

@@ -1,0 +1,9 @@
+package com.gst.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.gst.entity.Gst;
+
+public interface ProductRepository extends JpaRepository<Gst, Integer> {
+
+}

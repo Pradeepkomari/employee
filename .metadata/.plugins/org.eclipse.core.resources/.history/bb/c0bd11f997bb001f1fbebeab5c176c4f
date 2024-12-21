@@ -1,0 +1,21 @@
+package com.studentResults.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name ="results")
+public class StudentResultEntity {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private int rollNumber;
+	private String name;
+	private int total;
+	private int percentage;
+
+}

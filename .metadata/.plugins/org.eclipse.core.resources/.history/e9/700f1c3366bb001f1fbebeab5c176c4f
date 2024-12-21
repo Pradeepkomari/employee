@@ -1,0 +1,5 @@
+package com.studentDetails.dao;
+
+public class StudentDetailsDao {
+
+}

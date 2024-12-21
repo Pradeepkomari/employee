@@ -1,0 +1,13 @@
+package com.gst.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import com.gst.repository.GstRepository;
+
+@Repository
+public class GstDao {
+
+	@Autowired
+	GstRepository gr;
+
+}

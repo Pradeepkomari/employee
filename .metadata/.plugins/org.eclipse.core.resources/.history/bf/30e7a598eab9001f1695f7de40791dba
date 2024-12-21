@@ -1,0 +1,9 @@
+package com.product.entity;
+
+import jakarta.persistence.Table;
+
+@Table(name = "Product")
+
+public class Product {
+
+}
